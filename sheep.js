@@ -421,7 +421,7 @@ var sheep = (function () {
 		display.style.backgroundPosition = "-" + x + "px -" + y + "px";
 	}
 
-	function create_sheep(selector) {
+	function create_sheep(selector, gifUrl) {
 		if (typeof(selector) === "undefined")
 			selector = "div";
 		floors = getFloors(document.querySelectorAll(selector));
@@ -437,7 +437,7 @@ var sheep = (function () {
 		display = document.createElement("div");
 		display.setAttribute("class", "display");
 		display.style.position = "absolute";
-		display.style.background = "url(sheep.exe.gif)";
+		display.style.background = "url("+gifUrl+")";
 		display.style.width = sheep.width + "px";
 		display.style.height = sheep.height + "px";
 		document.body.appendChild(display);
